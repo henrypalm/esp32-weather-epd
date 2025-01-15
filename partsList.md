@@ -53,8 +53,4 @@ bme280 temp, pressure and humidity sensor
   usa one for $20
   https://www.microcenter.com/product/613614/adafruit-industries-bme280-i2c-spi-temperature-humidity-pressure-sensor
 
-
-OR 
-bmP280 just temp and humidity
   china  one for under $3
-https://www.aliexpress.us/item/3256804341669591.html?spm=a2g0o.productlist.main.3.65256409rYoRHH&algo_pvid=665fda83-ecfa-41a1-a488-6fd869890040&algo_exp_id=665fda83-ecfa-41a1-a488-6fd869890040-1&pdp_npi=4%40dis%21USD%210.94%210.94%21%21%210.94%210.94%21%40210313e917369138617921054e5651%2112000029484698902%21sea%21US%211963466801%21X&curPageLogUid=n2lhehYD42BJ&utparam-url=scene%3Asearch%7Cquery_from%3A
