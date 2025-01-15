@@ -1,5 +1,6 @@
 interesting frames
 https://www.printables.com/model/661183-e-ink-weather-station-frame/files
+https://www.printables.com/model/1139047-weather-station-e-ink-frame
 
 Desktop mounts
 https://www.printables.com/model/655768-esp32-e-paper-weather-display-stand/files
