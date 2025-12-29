@@ -42,6 +42,11 @@
 #define DRIVER_DESPI_C02
 // #define DRIVER_WAVESHARE
 
+// INDOOR ENVIRONMENT SENSOR
+// Uncomment the macro that identifies your sensor.
+#define SENSOR_BME280
+// #define SENSOR_BME680
+
 // 3 COLOR E-INK ACCENT COLOR
 // Defines the 3rd color to be used when a 3+ color display is selected.
 #if defined(DISP_3C_B) || defined(DISP_7C_F)
@@ -67,6 +72,7 @@
 //   Italiano (Italia)               it_IT
 //   Dutch (Belgium)                 nl_BE
 //   Portuguese (Brazil)             pt_BR
+//   Spanish (Spain)                 es_ES
 #define LOCALE en_US
 
 // UNITS
@@ -144,11 +150,11 @@
 //   update the certificates in cert.h and reflash this software.
 //   Running cert.py will generate an updated cert.h file.
 //   The current certificate for api.openweathermap.org is valid until
-//   2030-12-31 23:59:59.
+//   2026-04-10 23:59:59+00:00
 // (uncomment exactly one)
 // #define USE_HTTP
 // #define USE_HTTPS_NO_CERT_VERIF
-#define USE_HTTPS_WITH_CERT_VERIF
+#define USE_HTTPS_WITH_CERT_VERIF // REQUIRES MANUAL UPDATE WHEN CERT EXPIRES
 
 // WIND DIRECTION INDICATOR
 // Choose whether the wind direction indicator should be an arrow, number, or
@@ -246,8 +252,10 @@
 // STATUS BAR EXTRAS
 //   Extra information that can be displayed on the status bar. Set to 1 to
 //   enable.
-#define STATUS_BAR_EXTRAS_BAT_VOLTAGE 0
-#define STATUS_BAR_EXTRAS_WIFI_RSSI   0
+#define STATUS_BAR_EXTRAS_BAT_PERCENTAGE 1
+#define STATUS_BAR_EXTRAS_BAT_VOLTAGE    0
+#define STATUS_BAR_EXTRAS_WIFI_STRENGTH  1
+#define STATUS_BAR_EXTRAS_WIFI_RSSI      0
 
 // BATTERY MONITORING
 //   You may choose to power your weather display with or without a battery.
@@ -320,6 +328,10 @@ extern const uint32_t MIN_BATTERY_VOLTAGE;
 #if !(  defined(DRIVER_WAVESHARE) \
       ^ defined(DRIVER_DESPI_C02))
   #error Invalid configuration. Exactly one driver board must be selected.
+#endif
+#if !(  defined(SENSOR_BME280) \
+      ^ defined(SENSOR_BME680))
+  #error Invalid configuration. Exactly one sensor must be selected.
 #endif
 #if !(defined(LOCALE))
   #error Invalid configuration. Locale not selected.
